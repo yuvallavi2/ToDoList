@@ -1,0 +1,31 @@
+/*this is a component css*/
+
+.ToDoListProps {}
+
+.Table1048579Props {
+    height: 800px;
+    overflow-y: scroll;
+    border: red solid 1px;
+}
+
+.Table1048579_table_rowProps {}
+
+.Table1048579_table_rowProps:hover {
+    background-color: #EEEEEE;
+}
+
+.selected {
+    background: #F5F5F5;
+}
+
+.ListTasksProps {
+  display: flex;
+}
+
+.TaskProps {
+  flex-basis: 200px ;
+}
+
+.IsDoneProps {}
+
+.pbDelProps {}

@@ -1,0 +1,12 @@
+{
+  "components": [
+    {
+      "path": "TodoList/TodoListHad-Web/",
+      "name": "TodoListHad"
+    },
+    {
+      "path": "TodoList/TodoListHad-Web/ToDoList/",
+      "name": "ToDoList"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+<form
+  novalidate
+  [formGroup]="screenFormGroup"
+>
+  <div
+    magic="ToDoList"
+    class="ToDoListProps"
+  >
+    <div
+      class="Table1048579"
+      magic="Table1048579"
+      class="Table1048579Props"
+      infinite-scroll
+      [infiniteScrollDistance]="2"
+      [infiniteScrollThrottle]="500"
+      (scrolled)="onScrollDown()"
+      [scrollWindow]="false"
+    >
+      <div *ngFor="let row of task.Records.list">
+        <div
+          *ngIf="mgIfRowCreated(row.rowId)"
+          id="row"
+        >
+          <form
+            [formGroup]="mgGetFormGroupByRow(row.rowId)"
+            class="Table1048579_table_rowProps"
+            [ngClass]="{ 'selected': isRowSelected('Table1048579', row.rowId)}"
+          >
+            <div
+              magic="ListTasks"
+              class="ListTasksProps"
+            >
+              <input
+                type="checkbox"
+                id="IsDone"
+                magic="IsDone"
+                [rowId]="row.rowId"
+                class="IsDoneProps"
+                formControlName="IsDone"
+                (change)="mgOnCheckChanged($event,'IsDone')"
+              />
+              <label
+                magic="Task"
+                [rowId]="row.rowId"
+                class="TaskProps"
+              >
+                {{mgGetValue('Task', row.rowId)}}
+              </label>
+              <input
+                type="button"
+                magic="pbDel"
+                [rowId]="row.rowId"
+                class="pbDelProps"
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

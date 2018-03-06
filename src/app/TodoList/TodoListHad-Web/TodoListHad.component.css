@@ -1,0 +1,27 @@
+/*this is a component css*/
+
+.TodoListHadProps {}
+
+.GroupAddProps {
+    border: red solid 1px;
+}
+
+.NewToDoProps {}
+
+.pbAddToDoProps {}
+
+.MainCanvasProps {
+    border: red solid 1px;
+}
+
+.GroupTotalProps {
+    border: red solid 1px;
+}
+
+.LabelTotalDoneProps {}
+
+.TotalDoneProps {}
+
+.LabelTotalRecordsProps {}
+
+.TotalRecordsProps {}

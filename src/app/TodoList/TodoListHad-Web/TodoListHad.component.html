@@ -1,0 +1,63 @@
+<form
+  novalidate
+  [formGroup]="screenFormGroup"
+>
+  <div
+    magic="TodoListHad"
+    class="TodoListHadProps"
+  >
+    <div
+      magic="GroupAdd"
+      class="GroupAddProps"
+    >
+      <input
+        type="text"
+        formControlName="NewToDo"
+        magic="NewToDo"
+        class="NewToDoProps"
+      />
+      <input
+        type="button"
+        magic="pbAddToDo"
+        class="pbAddToDoProps"
+        value=AddToDo
+      />
+    </div>
+    <ndc-dynamic
+      magic="MainCanvas"
+      class="MainCanvasProps"
+      [ndcDynamicComponent]="mgGetComp('MainCanvas')"
+      [ndcDynamicInputs]="mgGetParameters('MainCanvas')"
+    >
+    </ndc-dynamic>
+    <div
+      magic="GroupTotal"
+      class="GroupTotalProps"
+    >
+      <label
+        magic="LabelTotalDone"
+        class="LabelTotalDoneProps mgFont1"
+      >
+        Total Done
+      </label>
+      <label
+        magic="TotalDone"
+        class="TotalDoneProps"
+      >
+        {{mgGetValue('TotalDone')}}
+      </label>
+      <label
+        magic="LabelTotalRecords"
+        class="LabelTotalRecordsProps mgFont1"
+      >
+        Total Records
+      </label>
+      <label
+        magic="TotalRecords"
+        class="TotalRecordsProps"
+      >
+        {{mgGetValue('TotalRecords')}}
+      </label>
+    </div>
+  </div>
+</form>
